@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- A remote: rounded body, round play button, two small keys. Drawn inside the 66dp safe zone. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <path
+        android:fillColor="@color/launcher_foreground"
+        android:fillType="evenOdd"
+        android:pathData="M44,26h20a8,8 0,0 1,8 8v40a8,8 0,0 1,-8 8h-20a8,8 0,0 1,-8 -8v-40a8,8 0,0 1,8 -8zM54,36a9,9 0,1 0,0 18a9,9 0,1 0,0 -18zM46,62a3,3 0,1 0,0 6a3,3 0,1 0,0 -6zM62,62a3,3 0,1 0,0 6a3,3 0,1 0,0 -6zM54,70a3,3 0,1 0,0 6a3,3 0,1 0,0 -6z" />
+    <path
+        android:fillColor="@color/launcher_foreground"
+        android:pathData="M51.5,40.5v9l7,-4.5z" />
+</vector>

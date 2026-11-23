@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lint>
+    <!--
+        PinnedTrustManager is a custom trust manager on purpose: the Mac agent's certificate is
+        self-signed, so there is no chain to validate, and the protocol pins the leaf by SHA-256
+        fingerprint instead (docs/PROTOCOL.md, section 1). It rejects everything but that one
+        certificate and is covered by PinnedTrustManagerTest and RemoteClientTest.
+    -->
+    <issue id="CustomX509TrustManager">
+        <ignore path="src/main/kotlin/dev/myremote/app/core/net/PinnedTrustManager.kt" />
+    </issue>
+</lint>

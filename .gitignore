@@ -1,0 +1,21 @@
+# macOS
+.DS_Store
+
+# SwiftPM / Xcode
+mac/.build/
+mac/.swiftpm/
+mac/build/
+*.xcuserstate
+xcuserdata/
+
+# Android / Gradle
+android/.gradle/
+android/build/
+android/**/build/
+android/local.properties
+android/.idea/
+android/.kotlin/
+*.iml
+*.apk
+*.keystore
+*.jks

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    The agent is reached only over TLS (wss://). Its self-signed certificate is not listed here:
+    it is different for every Mac and is pinned at runtime by the SHA-256 fingerprint from the
+    pairing QR code (see PinnedTrustManager), which replaces the default trust anchors for that
+    one connection. This file only makes sure nothing in the app can ever fall back to cleartext.
+-->
+<network-security-config>
+    <base-config cleartextTrafficPermitted="false" />
+</network-security-config>

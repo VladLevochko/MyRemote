@@ -1,0 +1,22 @@
+{
+  "valid": [
+    {
+      "uri": "myremote://pair?v=1&host=192.168.1.42&port=47110&id=0123456789abcdef&name=MacBook%20Pro&fp=3b7f0c1d9a2e4f5061728394a5b6c7d8e9f00112233445566778899aabbccdde&token=q83vEjRWeJCrze8SNFZ4kKvN7xI0VniQq83vEjRWeJA",
+      "expect": {"host": "192.168.1.42", "port": 47110, "id": "0123456789abcdef", "name": "MacBook Pro", "fp": "3b7f0c1d9a2e4f5061728394a5b6c7d8e9f00112233445566778899aabbccdde", "token": "q83vEjRWeJCrze8SNFZ4kKvN7xI0VniQq83vEjRWeJA"}
+    },
+    {
+      "uri": "myremote://pair?token=q83vEjRWeJCrze8SNFZ4kKvN7xI0VniQq83vEjRWeJA&fp=3b7f0c1d9a2e4f5061728394a5b6c7d8e9f00112233445566778899aabbccdde&name=%D0%9C%D1%96%D0%B9%20Mac&id=fedcba9876543210&port=50123&host=macbook.local&v=1&future=ignored",
+      "expect": {"host": "macbook.local", "port": 50123, "id": "fedcba9876543210", "name": "Мій Mac", "fp": "3b7f0c1d9a2e4f5061728394a5b6c7d8e9f00112233445566778899aabbccdde", "token": "q83vEjRWeJCrze8SNFZ4kKvN7xI0VniQq83vEjRWeJA"}
+    }
+  ],
+  "invalid": [
+    {"uri": "myremote://pair?v=2&host=192.168.1.42&port=47110&id=0123456789abcdef&name=Mac&fp=3b7f0c1d9a2e4f5061728394a5b6c7d8e9f00112233445566778899aabbccdde&token=q83vEjRWeJCrze8SNFZ4kKvN7xI0VniQq83vEjRWeJA", "reason": "unsupported version"},
+    {"uri": "myremote://pair?v=1&host=192.168.1.42&port=47110&id=0123456789abcdef&name=Mac&token=q83vEjRWeJCrze8SNFZ4kKvN7xI0VniQq83vEjRWeJA", "reason": "missing fp"},
+    {"uri": "myremote://pair?v=1&host=192.168.1.42&port=47110&id=0123456789abcdef&name=Mac&fp=abc123&token=q83vEjRWeJCrze8SNFZ4kKvN7xI0VniQq83vEjRWeJA", "reason": "fp is not 64 hex chars"},
+    {"uri": "myremote://pair?v=1&host=192.168.1.42&port=99999&id=0123456789abcdef&name=Mac&fp=3b7f0c1d9a2e4f5061728394a5b6c7d8e9f00112233445566778899aabbccdde&token=q83vEjRWeJCrze8SNFZ4kKvN7xI0VniQq83vEjRWeJA", "reason": "port out of range"},
+    {"uri": "myremote://pair?v=1&host=192.168.1.42&port=47110&id=0123456789abcdef&name=Mac&fp=3b7f0c1d9a2e4f5061728394a5b6c7d8e9f00112233445566778899aabbccdde&token=short", "reason": "token is not 32 bytes of base64url"},
+    {"uri": "https://example.com/pair?v=1&host=192.168.1.42&port=47110&id=0123456789abcdef&name=Mac&fp=3b7f0c1d9a2e4f5061728394a5b6c7d8e9f00112233445566778899aabbccdde&token=q83vEjRWeJCrze8SNFZ4kKvN7xI0VniQq83vEjRWeJA", "reason": "wrong scheme"},
+    {"uri": "myremote://other?v=1&host=192.168.1.42&port=47110&id=0123456789abcdef&name=Mac&fp=3b7f0c1d9a2e4f5061728394a5b6c7d8e9f00112233445566778899aabbccdde&token=q83vEjRWeJCrze8SNFZ4kKvN7xI0VniQq83vEjRWeJA", "reason": "wrong action"},
+    {"uri": "not a uri at all", "reason": "garbage"}
+  ]
+}

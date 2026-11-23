@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Екран сполучення -->
+    <string name="pairing_title">Сполучення з Mac</string>
+    <string name="pairing_body">Відкрийте агент MyRemote на Mac, покажіть QR-код сполучення та відскануйте його тут. Телефон і Mac мають бути в одній мережі Wi-Fi.</string>
+    <string name="pairing_scan">Сканувати QR-код</string>
+    <string name="pairing_or">або</string>
+    <string name="pairing_link_label">Посилання для сполучення</string>
+    <string name="pairing_connect">Сполучити</string>
+    <string name="pairing_scanner_unavailable">Сканер QR-кодів зараз недоступний на цьому пристрої. Вставте посилання для сполучення.</string>
+
+    <!-- Помилки посилання, окрема для кожної причини -->
+    <string name="pairing_error_not_a_uri">Це не посилання для сполучення. Воно має починатися з myremote://pair</string>
+    <string name="pairing_error_wrong_scheme">Це посилання «%1$s», а не посилання для сполучення MyRemote.</string>
+    <string name="pairing_error_wrong_action">Це посилання MyRemote, але не для сполучення.</string>
+    <string name="pairing_error_missing">Посилання неповне: бракує параметра «%1$s».</string>
+    <string name="pairing_error_version">Посилання використовує версію протоколу «%1$s», а цей застосунок підтримує версію 1. Оновіть застосунок або агент на Mac.</string>
+    <string name="pairing_error_host">Адреса Mac у посиланні некоректна.</string>
+    <string name="pairing_error_port">Порт у посиланні некоректний. Він має бути від 1 до 65535.</string>
+    <string name="pairing_error_id">Ідентифікатор агента в посиланні некоректний.</string>
+    <string name="pairing_error_name">Назва Mac у посиланні відсутня або некоректна.</string>
+    <string name="pairing_error_fp">Відбиток сертифіката в посиланні некоректний. Має бути 64 шістнадцяткові символи.</string>
+    <string name="pairing_error_token">Токен сполучення в посиланні некоректний.</string>
+
+    <!-- Стан підключення -->
+    <string name="status_disconnected">Не підключено</string>
+    <string name="status_connecting">Підключення…</string>
+    <string name="status_connected">Підключено</string>
+    <string name="status_retry_network">Mac недоступний. Повторна спроба…</string>
+    <string name="status_retry_heartbeat">Mac перестав відповідати. Перепідключення…</string>
+    <string name="status_retry_closed">Mac закрив з\'єднання. Перепідключення…</string>
+    <string name="status_retry_handshake">Mac не відповів. Повторна спроба…</string>
+    <string name="status_unauthorized">Сполучення більше не дійсне</string>
+    <string name="status_version">Несумісний агент на Mac</string>
+    <string name="status_pin_mismatch">Це не сполучений Mac</string>
+
+    <!-- Профілі -->
+    <string name="profile_generic">Інша програма</string>
+
+    <!-- Банери -->
+    <string name="banner_accessibility_title">Mac ігноруватиме цей пульт</string>
+    <string name="banner_accessibility_body">Агент MyRemote не має дозволу «Доступність» (Accessibility). На Mac відкрийте Системні параметри → Приватність і безпека → Доступність і дозвольте MyRemote.</string>
+    <string name="banner_unauthorized_body">Mac відхилив цей телефон. Імовірно, сполучення скинули на Mac. Сполучіть пристрої знову.</string>
+    <string name="banner_version_body">Агент на Mac не підтримує версію протоколу цього застосунку. Оновіть застосунок і агент на Mac.</string>
+    <string name="banner_pin_body">Комп\'ютер за адресою Mac показав інший сертифікат, тому йому нічого не надіслано. Якщо агент на Mac перевстановлювали, сполучіть пристрої знову.</string>
+    <string name="action_pair_again">Сполучити знову</string>
+    <string name="action_retry">Повторити</string>
+
+    <!-- Кнопки пульта (також підписи для спеціальних можливостей) -->
+    <string name="control_play_pause">Відтворення або пауза</string>
+    <string name="control_seek_back">Перемотати назад</string>
+    <string name="control_seek_forward">Перемотати вперед</string>
+    <string name="control_mute">Без звуку</string>
+    <string name="control_subtitles">Субтитри</string>
+    <string name="control_fullscreen">Повний екран</string>
+    <string name="control_previous">Попереднє</string>
+    <string name="control_next">Наступне</string>
+    <string name="control_skip">Пропустити</string>
+    <string name="control_volume_up">Гучніше</string>
+    <string name="control_volume_down">Тихіше</string>
+    <string name="control_back">Назад</string>
+    <string name="control_backspace">Стерти</string>
+    <string name="control_keyboard">Ввести текст</string>
+    <string name="trackpad_label">Трекпад</string>
+    <string name="trackpad_hint">Дотик — клац · два пальці — прокрутка · дотик двома пальцями — правий клац</string>
+
+    <!-- Введення тексту -->
+    <string name="text_title">Ввести текст на Mac</string>
+    <string name="text_field_label">Текст</string>
+    <string name="text_send">Надіслати</string>
+    <string name="text_enter">Enter</string>
+    <string name="text_close">Закрити</string>
+
+    <!-- Меню -->
+    <string name="menu_more">Інші дії</string>
+    <string name="menu_forget">Забути цей Mac</string>
+    <string name="forget_title">Забути «%1$s»?</string>
+    <string name="forget_body">Телефон перестане керувати цим Mac, доки ви знову не відскануєте його QR-код сполучення.</string>
+    <string name="forget_confirm">Забути</string>
+    <string name="cancel">Скасувати</string>
+
+    <!-- Відгук на команди -->
+    <string name="feedback_unsupported">Недоступно в «%1$s». Скористайтеся трекпадом.</string>
+    <string name="feedback_accessibility">Агент на Mac не має дозволу «Доступність» (Accessibility), тому нічого не сталося.</string>
+    <string name="feedback_bad_request">Агент на Mac не зрозумів цю команду.</string>
+    <string name="feedback_rejected">Mac відхилив команду (%1$s).</string>
+    <string name="feedback_timeout">Mac не відповідає.</string>
+    <string name="feedback_not_connected">Немає з\'єднання з Mac.</string>
+</resources>
